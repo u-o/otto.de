@@ -1,9 +1,18 @@
 OttoDe::Application.routes.draw do
-  get "static_pages/home"
+  
+  root :to => 'main_pages#home'
+  #match '/', to: 'main_pages#home'
+  match '/research', to: 'main_pages#research'
+  #match '/projects', to: 
+  #match '/publications', to: 
+  #match '/teaching', to:
+  #match '/theater', to:
+  match '/contact', to: 'main_pages#contact'
 
-  get "static_pages/help"
-  get "static_pages/about"
-  # The priority is based upon order of creation:
+  #get "main_pages/research"
+  #get "main_pages/contact"
+
+  #get "static_pages/help"  # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:

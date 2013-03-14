@@ -1,0 +1,88 @@
+
+body { font-family: "Trebuchet MS", sans-serif; font-size: 13px; color: #333; }
+
+a { color:#03c; text-decoration: none;}
+a:link { color: #03c; }
+a:visited {color: #03c;}
+a:hover {color: #eee000;}
+a:active {color: #c94343;}
+
+h1 { margin: 0; padding-top:0; font-size: 22px;}
+h2 { color: #888; font-weight: normal; font-size: 16px; }
+
+#page { position:absolute; left:20%; margin-left: 20px; top:13%; margin-top:20px; width: 60%; }
+
+#uppershade {position:fixed; top:0; left:0; width:100%; height:20px; background-color:white;}
+#lowershade {position:fixed; bottom:0; left:0; width:100%; height:20px;background-color:white; }
+#leftshade {}
+#rightshade {}
+
+#menushade { position:fixed; top:0; left:0; width:100%; margin-top:20px; height:10%;background-color:white; }
+#leftguy { position:fixed; bottom: -20px; left: -20px; opacity:0.4;}
+#rightguy { position:fixed; bottom: -20px; right: -20px; opacity:0.5;}
+
+#menu { position:fixed; left:20%; margin-left: 0%; margin-top:20px; top:10%; width:60%; border-top:1px solid black;}
+#sidebar { position:fixed; left:0; width:20%; margin-top:20px; top:10%; height:70%; overflow:hidden; border-right:1px solid black;}
+#title { position:fixed; left:0; width:20%; margin-top:20px; top:10%; overflow:hidden; text-align:right; }
+#status { position:fixed; right:20px; bottom:20px; text-align:right;  }
+
+nav { position:absolute; top:-20px; left: 0px; white-space:nowrap; }
+
+
+
+
+
+
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0.2em 0;
+}
+nav ul li a {
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+nav ul li a:visited {
+  color: #09c;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+	
+
+
+
+#sidebar ul { margin-top:0 ; margin-left: 0; padding-left: 0; padding-right: 10px; text-align:right; }
+
+#title ul {
+	margin-top:0 ;
+	margin-left: 0;
+	padding-left: 0;
+	padding-right: 10px;
+	text-align:right;
+}
+#sidebar li {
+	list-style-type: none;
+}
+
+
+
+
+
+table.schedule{
+  border-collapse:collapse;
+  background-color:#f0f0f0;
+}
+table.schedule,th.schedule,td.schedule{
+  border: 1px solid black;
+  padding:2mm;
+
+}
+
+
+
+

@@ -1,14 +1,68 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>ottó.de | <%= yield(:title) %></title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+		<meta name="charset" content="utf-8" />
+		<title>ott&oacute;.de: <%= controller.action_name %></title>
 
-<%= yield %>
+ 		<%= stylesheet_link_tag 'application', media: 'all' %>
+ 		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+		<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	</head>
+	
+	<body>
+		<div id="uppershade"></div>	
+		<div id="lowershade"></div>
+		<div id="menushade"></div>
 
-</body>
+		<div id="leftguy">
+			<%= image_tag "patient.gif"%>
+		</div>
+		<div id="rightguy">
+			<%= image_tag "doctor.gif"%>
+		</div>
+		
+	  <header>
+
+		<div id="title"><% link_to "otto.de", root_path %></div>
+	
+	    <div id="menu">
+  		  <nav>
+          <%= link_to "research", research_path %> / 
+          <%= link_to "projects", '#' %> / 
+          <%= link_to "publications", '#' %> / 
+          <%= link_to "teaching", '#' %> / 
+          <%= link_to "theater", '#' %> / 
+          <%= link_to "contact", contact_path %>   
+  			</nav>
+  		</div>
+	
+			<div id="sidebar">
+				<nav>
+				  <ul>
+  					<% if @sidebar %>
+  						<% @sidebar.each do |ref| %>
+  						  <li>[<%# link_to ref[:name], ref[:link] -%>]</li>
+  						<% end %>
+  					<% end %>
+  				</ul>
+				</nav>
+			</div>
+			
+		</header>		
+				
+  	<div id="page">
+			<section>
+				<%= yield %>
+				<%= debug(params) if Rails.env.development? %>
+			</section>
+		</div>
+	    
+	  <footer id="status">    
+		  <small><i>Last update: 1.3.11 </i></small>
+		</footer>    
+
+	</body>
 </html>
